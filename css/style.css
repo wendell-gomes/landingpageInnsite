@@ -1,0 +1,59 @@
+.tm-social { 
+  width: 40px;
+  height: 40px;
+}
+
+header {
+padding: 10px; 
+position: fixed; 
+top:0; 
+left: 0; 
+right: 0; 
+z-index: 9;
+transition: .5s;
+background-image: url("https://i.imgur.com/iWzqkl7.png");
+}
+
+.logo {
+height: 50px;
+}
+
+
+.margem{
+  margin-top: 2%;
+}
+
+.fundo {
+  background-image: url("https://i.imgur.com/iWzqkl7.png");
+  background-size: cover;
+  height: 900px;
+}
+
+.text{
+  margin-top: 40%;
+  text-align: center;
+  float: right;
+}
+
+.img-celular{
+  margin-top: 10%;
+  width: 50%;
+  margin-left: 30%;
+}
+
+.img-redes{
+  margin-top: 100%;
+  float: left;
+}
+
+
+@media screen and (max-width: 992px) {
+.navbar-eco {
+height: auto;
+}
+
+.navbar-nav {
+justify-content: flex-end;
+align-items: flex-end;
+  }
+}
