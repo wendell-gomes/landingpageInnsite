@@ -1,3 +1,7 @@
+/**
+ * CSS com todas personalizações feitas no projetos
+ */
+
 .tm-social { 
   width: 40px;
   height: 40px;
@@ -103,17 +107,12 @@ justify-content: flex-end;
 align-items: flex-end;
   }
 
-
-
-
 /* Utilizei o posicion absoluta para colocar a div dentro do card com o bottom: 0, que deixa a div com zero de distância da parte de baixo da div-mãe (div do card), e deixei com width de 100% para ficar com o comprimento da div-mãe */
 .legenda-carrosel {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
-
-
 
 .card {
   transition-duration: 0.5s;
@@ -138,8 +137,6 @@ textarea:focus, input:focus, select:focus {
   text-align: center;
   font-weight: 500;
 }
-
-
 
 .card-carrosel-innsite {
   max-width: 90%;
@@ -174,8 +171,6 @@ textarea:focus, input:focus, select:focus {
   transform: scale(1.2);
 }
 
-
-
 .footer {
   background-image: url("https://i.imgur.com/iWzqkl7.png");
 }
@@ -198,7 +193,6 @@ textarea:focus, input:focus, select:focus {
 p{
   white-space: pre;
 }
-
 
 .descricao{
   color: #3a3a3a;
@@ -234,8 +228,6 @@ color: #ffffff;
 .tamanho{
   font-size: 1.4em;
 }
-
-
 
 .menu-final-rodape {
   display: flex;
