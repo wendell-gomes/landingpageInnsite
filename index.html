@@ -21,55 +21,174 @@
     
     <!--Barra de navegação-->
     <header>
+      <img class="logo-navbar logo-navbar-telefone" src="assets/img/telefone.png" alt=""> 
+      <h10 class="cliente">(15) 98813-0247</h10>
+      <img class="logo-navbar logo-navbar-cadeado" src="assets/img/cadeado.png" alt="">  
+      <h10 class="cliente">ÁREA DO CLIENTE</h10> 
       <nav class="container navbar navbar-expand-lg navbar-eco">
             <a class="nav-link">
                 <img src="assets/img/logo.png" alt="Logo image" class="logo">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <h5 class="menu-navbar">Home</h5>
+            <h5 class="menu-navbar-after">Sobre</h5>
+            <h5 class="menu-navbar-after">Serviços</h5>
+            <h5 class="menu-navbar-after">Portifólio</h5>
+            <h5 class="menu-navbar-after">Blog</h5>
+            <button type="button" class="btn btn-outline-light menu-navbar-after btn-menu-navbar">
+              Contato
             </button>
         </nav>
-      </div>
     </header>
     <!--Barra de navegação-->
 
     <div class="container-fluid margem fundo">
       <div class="row">
         <div class="col-md-4">
-          <h1 class="text">Essa Empresa</h1>
+          <h5 class="text fonte-empresa">Agência de</h5>
+          <h1 class="text-maior fonte-empresa">Marketing</h1>
+          <h1 class="text-maior-digital fonte-empresa">Digital e</h1>
+          <h1 class="text-maior-publicidade fonte-empresa">Publicidade</h1>
+          <h5 class="texto fonte-empresa">Sua comunicação muito mais bonita, com resultados reais em venda. Solicite um diagnóstico gratuito do seu marketing agora mesmo.</h5>
+          <button type="button" class="btn btn-outline-light btn-solicite">
+            SOLICITE UM ORÇAMENTO
+          </button>
         </div>
         <div class="col-md-6">
           <img class= "img-celular" src="assets/img/celulares.png" alt="">
         </div>
         <div class="col-md-2">
-          <h1 class="img-redes">A</h1>
+          <img class="linha" src="assets/img/Line 6.png" alt="">
         </div>
       </div>
-
     </div>
      
 
     <!--Carousel-->
-      
+
+    <div class="responsividade1">
+      <div id="itens" class="carousel slide" data-ride="carousel" data-interval="10000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="mt-4 d-flex justify-content-center">
+              <div class="row sessionCards row-cols-md-2 row-cols-lg-3 row-cols-sm-1 w-75">
+
+                <div class="col mb-4">
+                  <div class="card" [routerLink]="['/produtos', produto.id]">
+                    <div style="width: 100%; overflow: hidden;">
+                      <img src="assets/img/dilly.png" class="card-img-top" [alt]="produto.nome">
+                    </div>
+                    <div class="card-body" style="margin-bottom: 0; padding-bottom: 0;">
+                      <h5 style="font-weight: 500; text-align: center; margin-bottom: 0;">Amigo</h5>
+                    </div>
+                    <div class="card-body d-flex flex-column align-items-center justify-content-end" style="margin-top: 0; padding-top: 0;">
+                      <hr class="w-100">
+                      <h5 class="preco">1000</h5>
+                      <div class="d-flex flex-column justify-content-center">
+                        <span class="parcela" style="text-align: center;">Subtitulo</span>
+                        <div class="d-flex justify-content-center">
+                          <button class="btn btn-success mt-3" [routerLink]="['/produtos', produto.id]">
+                            VER --->
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="mt-4 d-flex justify-content-center">
+              <div class="row sessionCards row-cols-md-2 row-cols-lg-3 row-cols-sm-1 w-75">
+
+                <div class="col mb-4" *ngFor="let produto of listaProdutos | slice:3:6;">
+                  <div class="card">
+                    <div style="width: 100%; overflow: hidden;">
+                      <img [src]="produto.imagem1" class="card-img-top" [alt]="produto.nome">
+                    </div>
+                    <div class="card-body" style="margin-bottom: 0; padding-bottom: 0;">
+                      <h5 style="font-weight: 500; text-align: center; margin-bottom: 0;">{{ produto.nome }}</h5>
+                    </div>
+                    <div class="card-body d-flex flex-column align-items-center justify-content-end" style="margin-top: 0; padding-top: 0;">
+                      <hr class="w-100">
+                      <h5 class="preco">R$ {{ produto.preco | number : '1.2-2' }}</h5>
+                      <div class="d-flex flex-column justify-content-center">
+                        <span class="parcela" style="text-align: center;">ou 3x de R$ {{ produto.preco / 3 | number : '1.2-2'}} sem juros</span>
+                        <div class="d-flex justify-content-center">
+                          <button class="btn btn-success mt-3" [routerLink]="['/produtos', produto.id]">
+                            Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="mt-4 d-flex justify-content-center">
+              <div class="row sessionCards row-cols-md-2 row-cols-lg-3 row-cols-sm-1 w-75">
+
+                <div class="col mb-4" *ngFor="let produto of listaProdutos | slice:6:9;">
+                  <div class="card">
+                    <div style="width: 100%; overflow: hidden;">
+                      <img [src]="produto.imagem1" class="card-img-top" [alt]="produto.nome">
+                    </div>
+                    <div class="card-body" style="margin-bottom: 0; padding-bottom: 0;">
+                      <h5 style="font-weight: 500; text-align: center; margin-bottom: 0;">{{ produto.nome }}</h5>
+                    </div>
+                    <div class="card-body d-flex flex-column align-items-center justify-content-end" style="margin-top: 0; padding-top: 0;">
+                      <hr class="w-100">
+                      <h5 class="preco">R$ {{ produto.preco | number : '1.2-2' }}</h5>
+                      <div class="d-flex flex-column justify-content-center">
+                        <span class="parcela" style="text-align: center;">ou 3x de R$ {{ produto.preco / 3 | number : '1.2-2'}} sem juros</span>
+                        <div class="d-flex justify-content-center">
+                          <button class="btn btn-success mt-3" [routerLink]="['/produtos', produto.id]">
+                            Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev controle-eco rounded" href="#itens" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next controle-eco rounded" href="#itens" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+    </div>
+
       <!--Carousel-->
 
-      <!--JumboTron-->
+      <!--Mensagem-->
+      <div class="pt-5 footer-eco">
+        <div class="container">
+            <div class="primeira-linha-rodape">        
+              <img class="logo-loja" src="assets/img/store.png" alt="">   
+                <ul class="menu-rodape">
+                    <span class="cor-menu-rodape" href="">Política</span>
+                </ul>
+                <button class="btn btn-success mt-3" [routerLink]="['/produtos', produto.id]">
+                  Comprar
+                </button>        
+            </div>
+        </div>
+    </div>
+      <!--Mensagem-->
 
-      <!--JumboTron-->
-
-    <!--Cards-->
-
-    
-    <!--Cards-->
-    
-    
-    
-    
-    
-    <!--Sobre nós-->
-    
-    
-    <!--Sobre nós-->
 
     <!--JavaScript-->
     <!--Jquery-->
