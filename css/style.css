@@ -93,7 +93,10 @@ height: 50px;
   margin-left: 42%;
 }
 
-
+.icones{
+  margin-top: 5%;
+  margin-left: 50%;
+}
 
 .navbar-nav {
 justify-content: flex-end;
@@ -101,9 +104,7 @@ align-items: flex-end;
   }
 
 
-.img-jumbotron {
-  width: 100%;
-}
+
 
 /* Utilizei o posicion absoluta para colocar a div dentro do card com o bottom: 0, que deixa a div com zero de distância da parte de baixo da div-mãe (div do card), e deixei com width de 100% para ficar com o comprimento da div-mãe */
 .legenda-carrosel {
@@ -112,22 +113,16 @@ align-items: flex-end;
   width: 100%;
 }
 
-/* coloquei um background preto com 33% de opacidade para favorecer a leitura (contrastre com as letras brancas), e coloquei padding para o texto não ficar colado nas extremidades, especialmente na extremidade de baixo. Também deixei a cor do texto branco e usei o display flex pra centralizar o conteúdo verticalmente e horizontalmente */
-.carrosel2-bg {
-  background-color: rgba(0, 0, 0, 0.33);
-  padding: 30px 35px 40px 35px;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+
 
 .card {
-  transition-duration: 0.3s;
+  transition-duration: 0.5s;
   cursor: pointer;
-  height: 100%;
-  overflow: hidden;
+  outline-offset: 0px;
+}
+
+textarea:focus, input:focus, select:focus {
+  outline: 0;
 }
 
 .card:hover {
@@ -144,42 +139,34 @@ align-items: flex-end;
   font-weight: 500;
 }
 
-.parcela {
-  color:var(--verde-parcela);
-  text-align: center;
-  font-size: 0.9em;
-}
 
-.card-carrosel-eco {
+
+.card-carrosel-innsite {
   max-width: 90%;
   max-height: 95%;
   transition: .1s;
-  border: 0;
-  border-bottom: 5px solid rgba(255, 255, 255, 0);
-  box-shadow: 5px 1 5px -4px rgba(237, 241, 235, 0.8);
-  box-shadow: 5px 0 5px -4px rgba(237, 241, 235, 0.8);
   cursor: pointer;
+  border-color: rgba(255, 255, 255, 0);
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
 }
 
-.controle-eco {
-  filter: invert(100%);
-  margin-left: 0%;
-  margin-right: 0%;
-  height: 25%;
-  width: 7%;
-  margin-top: auto;
-  margin-bottom: auto;
+.controle-innsite {
+  height: 50px;
+  width: 10px;
+  margin-top: 25%;
   transition-duration: .5s;
-  background-color: rgba(221, 221, 221, 0.068);
+  background-color: #594dff;
 }
 
-.controle-eco:hover {
-  background-color: rgba(221, 221, 221, 0.219);
+.controle-innsite:hover {
+  background-color: #594dff;
 }
 
 .card-img-top {
-  height: 349px;
-  width: 454px;
+  height: 550px;
+  width: 200px;
   transition: transform .2s;
 }
 
@@ -187,76 +174,9 @@ align-items: flex-end;
   transform: scale(1.2);
 }
 
-.img-jumbotron-eco {
-  width: 30%;
-}
-
-.texto-jumbotron-eco {
-  width: 70%;
-}
-
-.responsividade2 {
-  display: none;
-}
-
-@media screen and (max-width: 992px) {
-  .responsividade2 {
-      display: block;
-  }
-
-  .responsividade1 {
-      display: none;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  #carrosel-2 {
-      display: none;
-  }
-
-  .grande-carrosel-eco {
-      justify-content: center;
-      align-items: center;
-  }
-
-  .img-jumbotron-eco {
-      display: none;
-  }
-
-  .texto-jumbotron-eco {
-      width: 100%;
-  }
-
-  .jumbotron-home-eco {
-      padding: 15px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .jumbotron-home-eco {
-      display: none;
-  }
-}
-
-@media screen and (max-width: 410px) {
-  .parcela {
-      display: none;
-  }
-
-  .btn-success {
-      display: none;
-  }
-}
 
 
-
-
-
-
-
-
-
-.footer-eco {
+.footer {
   background-image: url("https://i.imgur.com/iWzqkl7.png");
 }
 
@@ -275,21 +195,18 @@ align-items: flex-end;
   padding: 0;
 }
 
-
-li {
-  list-style:none;
-  padding: 10px;
-  
+p{
+  white-space: pre;
 }
 
-a {
-  color: rgba(0,0,0,.5);
-  text-decoration: none;
-  transition: color 0.5s;
-}
 
-i {
-  transition: color 0.5s;
+.descricao{
+  color: #3a3a3a;
+  font-family: "Lato",sans-serif;
+  font-size: 16px;
+  color: #3a3a3a;
+  font-weight: 400;
+  display: block;
 }
 
 .cor-copy {
@@ -301,6 +218,7 @@ color: #ffffff;
 }
 
 .linha{
+  margin-left: 55%;
   margin-top: 120%;
 }
 
@@ -324,8 +242,7 @@ color: #ffffff;
 }
 
 .logo-loja{
-  width: 20;
-  height: 20;
+  padding: 5%;
 }
 
 .logo-navbar{
@@ -360,64 +277,39 @@ color: #ffffff;
   color: #ffffff;
 }
 
-
-@media screen and (max-width: 1210px) {
-  .logo {
-      display: none;
-  }
-
-  .menu-rodape {
-      justify-content: center;
-  }
-
-  .menu-redes-sociais {
-      margin-right: auto;
-  }
-
-  .primeira-linha-rodape {
-      flex-direction: column;
-      justify-content: center;
-  }
+.fonte-portifolio{
+  color: #594dff;
+  font-size: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
-@media screen and (max-width: 1025px) {
-  .menu-rodape li:nth-child(3) {
-      display: none;
-  }
+.fonte-portfolio{
+  margin-left: 43%;
+  font-size: 8;
+  color: #3a3a3a;
 }
 
-@media screen and (max-width: 1025px) {
-  .menu-rodape li:nth-child(2) {
-      display: none;
-  }
+.fonte-trabalho{
+  margin-left: 8%;
+  font-size: 8;
+  color: #3a3a3a;
 }
 
-@media screen and (max-width: 800px) {
-  .menu-rodape li:nth-child(5) {
-      display: none;
-  }
+.fonte-rodape{
+    margin-top: 15%;
+    color: #fff;
+    font-family: "Lato",Sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-@media screen and (max-width: 770px) {
-  .cor-copy {
-      text-align: center;
-  }
-
-  .voltar-ao-topo {
-      margin-left: 0;
-      margin-top: 8px;
-  }
-
-  .menu-final-rodape {
-      flex-direction: column;
-      justify-content: center;
-  }
+.btn-solicite-flooter{
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-bottom: 5%;
 }
 
-@media screen and (max-width: 500px) {
-  .menu-rodape {
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-  }
-}
+

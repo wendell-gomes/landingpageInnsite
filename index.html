@@ -39,7 +39,10 @@
             </button>
         </nav>
     </header>
+    
     <!--Barra de navegação-->
+
+    <!--Banner Principal-->
 
     <div class="container-fluid margem fundo">
       <div class="row">
@@ -50,7 +53,7 @@
           <h1 class="text-maior-publicidade fonte-empresa">Publicidade</h1>
           <h5 class="texto fonte-empresa">Sua comunicação muito mais bonita, com resultados reais em venda. Solicite um diagnóstico gratuito do seu marketing agora mesmo.</h5>
           <button type="button" class="btn btn-outline-light btn-solicite">
-            SOLICITE UM ORÇAMENTO
+            SOLICITE UM ORÇAMENTO 🠖
           </button>
         </div>
         <div class="col-md-6">
@@ -58,136 +61,220 @@
         </div>
         <div class="col-md-2">
           <img class="linha" src="assets/img/Line 6.png" alt="">
+          <img class="icones" src="assets/img/facebook.png" alt="">
+          <img class="icones" src="assets/img/instragam.png" alt="">
+          <img class="icones" src="assets/img/linkedln.png" alt="">
+          <img class="icones" src="assets/img/pinterest.png" alt="">
+          <img class="icones" src="assets/img/youtube.png" alt="">
         </div>
       </div>
     </div>
+
+    <!--Banner Principal-->
      
 
     <!--Carousel-->
-
-    <div class="responsividade1">
-      <div id="itens" class="carousel slide" data-ride="carousel" data-interval="10000">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="mt-4 d-flex justify-content-center">
-              <div class="row sessionCards row-cols-md-2 row-cols-lg-3 row-cols-sm-1 w-75">
-
-                <div class="col mb-4">
-                  <div class="card" [routerLink]="['/produtos', produto.id]">
-                    <div style="width: 100%; overflow: hidden;">
-                      <img src="assets/img/dilly.png" class="card-img-top" [alt]="produto.nome">
-                    </div>
-                    <div class="card-body" style="margin-bottom: 0; padding-bottom: 0;">
-                      <h5 style="font-weight: 500; text-align: center; margin-bottom: 0;">Amigo</h5>
-                    </div>
-                    <div class="card-body d-flex flex-column align-items-center justify-content-end" style="margin-top: 0; padding-top: 0;">
-                      <hr class="w-100">
-                      <h5 class="preco">1000</h5>
-                      <div class="d-flex flex-column justify-content-center">
-                        <span class="parcela" style="text-align: center;">Subtitulo</span>
-                        <div class="d-flex justify-content-center">
-                          <button class="btn btn-success mt-3" [routerLink]="['/produtos', produto.id]">
-                            VER --->
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="mt-4 d-flex justify-content-center">
-              <div class="row sessionCards row-cols-md-2 row-cols-lg-3 row-cols-sm-1 w-75">
-
-                <div class="col mb-4" *ngFor="let produto of listaProdutos | slice:3:6;">
-                  <div class="card">
-                    <div style="width: 100%; overflow: hidden;">
-                      <img [src]="produto.imagem1" class="card-img-top" [alt]="produto.nome">
-                    </div>
-                    <div class="card-body" style="margin-bottom: 0; padding-bottom: 0;">
-                      <h5 style="font-weight: 500; text-align: center; margin-bottom: 0;">{{ produto.nome }}</h5>
-                    </div>
-                    <div class="card-body d-flex flex-column align-items-center justify-content-end" style="margin-top: 0; padding-top: 0;">
-                      <hr class="w-100">
-                      <h5 class="preco">R$ {{ produto.preco | number : '1.2-2' }}</h5>
-                      <div class="d-flex flex-column justify-content-center">
-                        <span class="parcela" style="text-align: center;">ou 3x de R$ {{ produto.preco / 3 | number : '1.2-2'}} sem juros</span>
-                        <div class="d-flex justify-content-center">
-                          <button class="btn btn-success mt-3" [routerLink]="['/produtos', produto.id]">
-                            Comprar
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="mt-4 d-flex justify-content-center">
-              <div class="row sessionCards row-cols-md-2 row-cols-lg-3 row-cols-sm-1 w-75">
-
-                <div class="col mb-4" *ngFor="let produto of listaProdutos | slice:6:9;">
-                  <div class="card">
-                    <div style="width: 100%; overflow: hidden;">
-                      <img [src]="produto.imagem1" class="card-img-top" [alt]="produto.nome">
-                    </div>
-                    <div class="card-body" style="margin-bottom: 0; padding-bottom: 0;">
-                      <h5 style="font-weight: 500; text-align: center; margin-bottom: 0;">{{ produto.nome }}</h5>
-                    </div>
-                    <div class="card-body d-flex flex-column align-items-center justify-content-end" style="margin-top: 0; padding-top: 0;">
-                      <hr class="w-100">
-                      <h5 class="preco">R$ {{ produto.preco | number : '1.2-2' }}</h5>
-                      <div class="d-flex flex-column justify-content-center">
-                        <span class="parcela" style="text-align: center;">ou 3x de R$ {{ produto.preco / 3 | number : '1.2-2'}} sem juros</span>
-                        <div class="d-flex justify-content-center">
-                          <button class="btn btn-success mt-3" [routerLink]="['/produtos', produto.id]">
-                            Comprar
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
+    
+    
+    
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4">
+          <h5 class="text fonte-trabalho">Nosso trabalho</h5>
+          <h1 class="text-maior fonte-portifolio">Portfólio</h1>
+          <h5 class="texto fonte-portfolio">Colaboramos com empresas de pequeno à grande porte nacionalmente para ajudá-las a engajar seu público e conseguir resultados.</h5>
+          <button type="button" class="btn btn-outline-dark btn-solicite">
+            VER TODOS 🠖
+          </button>
         </div>
-        <a class="carousel-control-prev controle-eco rounded" href="#itens" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next controle-eco rounded" href="#itens" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+      
+        <div class="col-md-8">
+          <div class="responsividade1 mt-5 mb-5">
+            <div id="itens-lancamento" class="carousel slide" data-ride="carousel" data-interval="10000">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="d-flex justify-content-center">
+                    <div class="row sessionCards">
+    
+                      <div class="col mb-4">
+                        <div class="card">
+                          <div style="width: 100%; overflow: hidden;">
+                            <img src="assets/img/placas.png" class="card-img-top">
+                          </div>
+                          <div class="card-body" style="margin-bottom: 0; padding-bottom: 0;">
+                            <h5>Placas.Autos</h5>
+                          </div>
+                          <div class="card-body d-flex flex-column justify-content-end" style="margin-top: 0; padding-top: 0;">
+                            <div class="d-flex flex-column">
+                              <p class="descricao"">
+Empresa de emplacamento mercosul com 
+toda a comunicação elaborada por nós</p>
+                              <div class="d-flex">
+                                <button class="btn btn-outline-dark mt-3">
+                                  Ver 🠖
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+    
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-center">
+                    <div class="row sessionCards">
+    
+                      <div class="col mb-4">
+                        <div class="card">
+                          <div style="width: 100%; overflow: hidden;">
+                            <img src="assets/img/primos.png" class="card-img-top">
+                          </div>
+                          <div class="card-body" style="margin-bottom: 0; padding-bottom: 0;">
+                            <h5>Primos Materiais</h5>
+                          </div>
+                          <div class="card-body d-flex flex-column justify-content-end" style="margin-top: 0; padding-top: 0;">
+                            <div class="d-flex flex-column justify-content-center">
+                              <p class="descricao">
+Materiais para construção, empresa de grande 
+presença na cidade de Sorocaba. 
+Redes sociais e gestão de tráfego.</p>
+                              <div class="d-flex">
+                                <button class="btn btn-outline-dark mt-3">
+                                  Ver 🠖
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+    
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-center">
+                    <div class="row sessionCards">
+    
+                      <div class="col mb-4">
+                        <div class="card">
+                          <div style="width: 100%; overflow: hidden;">
+                            <img src="assets/img/Rectangle 9.png" class="card-img-top">
+                          </div>
+                          <div class="card-body" style="margin-bottom: 0; padding-bottom: 0;">
+                            <h5>Simone Personal</h5>
+                          </div>
+                          <div class="card-body d-flex flex-column justify-content-end" style="margin-top: 0; padding-top: 0;">
+                            <div class="d-flex flex-column justify-content-center">
+                              <p class="descricao">
+Personal Trainer especializada em exercícios 
+para pessoas com patologias.</p>
+                              <div class="d-flex">
+                                <button class="btn btn-outline-dark mt-3">
+                                  Ver 🠖
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+    
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-center">
+                    <div class="row sessionCards">
+    
+                      <div class="col mb-4">
+                        <div class="card">
+                          <div style="width: 100%; overflow: hidden;">
+                            <img src="assets/img/dilly.png" class="card-img-top">
+                          </div>
+                          <div class="card-body" style="margin-bottom: 0; padding-bottom: 0;">
+                            <h5>Dilly Troy</h5>
+                          </div>
+                          <div class="card-body d-flex flex-column justify-content-end" style="margin-top: 0; padding-top: 0;">
+                            <div class="d-flex flex-column justify-content-center">
+                              <span class="descricao mt-3 mb-3">Dentista especializada em harmonização orofacial.</span>
+                              <div class="d-flex">
+                                <button class="btn btn-outline-dark mt-3">
+                                  Ver 🠖
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+    
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-center">
+                    <div class="row sessionCards">
+    
+                      <div class="col mb-4">
+                        <div class="card">
+                          <div style="width: 100%; overflow: hidden;">
+                            <img src="assets/img/recriar.png" class="card-img-top">
+                          </div>
+                          <div class="card-body" style="margin-bottom: 0; padding-bottom: 0;">
+                            <h5>Recriar Pedagógica</h5>
+                          </div>
+                          <div class="card-body d-flex flex-column justify-content-end" style="margin-top: 0; padding-top: 0;">
+                            <div class="d-flex flex-column justify-content-center">
+                              <p class="descricao mt-3 mb-3">Reforço escolar e acompanhamento pedagógico.</p>
+                              <div class="d-flex">
+                                <button class="btn btn-outline-dark mt-3">
+                                  Ver 🠖
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+    
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-next controle-innsite rounded" href="#itens-lancamento" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>    
+        </div>
       </div>
-
     </div>
+    
+    <!--Carousel-->
 
-      <!--Carousel-->
-
-      <!--Mensagem-->
-      <div class="pt-5 footer-eco">
+      <!--Flooter-->
+      <div class="footer">
         <div class="container">
             <div class="primeira-linha-rodape">        
               <img class="logo-loja" src="assets/img/store.png" alt="">   
                 <ul class="menu-rodape">
-                    <span class="cor-menu-rodape" href="">Política</span>
+                    <span class="fonte-rodape" href="">O futuro da sua empresa começa hoje</span>
                 </ul>
-                <button class="btn btn-success mt-3" [routerLink]="['/produtos', produto.id]">
-                  Comprar
-                </button>        
+                <button type="button" class="btn btn-outline-light btn-solicite-flooter">
+                  SOLICITE UM ORÇAMENTO
+                </button>      
             </div>
         </div>
     </div>
-      <!--Mensagem-->
+      <!--Flooter-->
 
 
     <!--JavaScript-->
